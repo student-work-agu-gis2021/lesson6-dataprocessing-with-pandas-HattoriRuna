@@ -103,6 +103,7 @@ last_obs = None
 
 # YOUR CODE HERE 6
 
+
 #CAUTION!!! DON'T EDIT THIS PART START
 # Print out the solution:
 print('Date of the last observation:', last_obs)
