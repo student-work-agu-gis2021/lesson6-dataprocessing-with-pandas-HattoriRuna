@@ -102,11 +102,13 @@ print('Date of the first observation:',first_obs)
 last_obs = None
 
 # YOUR CODE HERE 6
-
+# Find the date of the most recent (last) observation
+last_obs = max(data['DATE'])
 
 #CAUTION!!! DON'T EDIT THIS PART START
 # Print out the solution:
 print('Date of the last observation:', last_obs)
+
 #CAUTION!!! DON'T EDIT THIS PART END
 
 
