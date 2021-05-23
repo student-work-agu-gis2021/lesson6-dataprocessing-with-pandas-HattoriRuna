@@ -88,6 +88,8 @@ print("Number of days:", day_count)
 first_obs = None
  
 # YOUR CODE HERE 5
+# Find the date of the oldest (first) observation
+first_obs = min(data['DATE'])
 
 #CAUTION!!! DON'T EDIT THIS PART START
 # Print out the solution:
