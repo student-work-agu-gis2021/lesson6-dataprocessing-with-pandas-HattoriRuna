@@ -17,16 +17,25 @@ import numpy as np
 data = None
 
 # YOUR CODE HERE 1
-# reading the data file
+# Reading the data file
 fp = r'data/1091402.txt'
+# Skip the second line and convert the value without data (-9999) to NaN.
 data = pd.read_csv(fp, delim_whitespace = True, skiprows = 2, na_values = ['-9999'])
+# Read the as a numpy array
 x = np.array(data)
+# Insert on line 0
 data = np.insert(x, 0, ['STATION', 'ELEVATION', 'LATITUDE', 'LONGTUDE', 'DATE', 'PRCP', 'TAVG', 'TMAX', 'TMIN'], axis = 0)
+# Return the data to pandas
 data = pd.DataFrame(data)
+# Specify line 0 for columns
 data = data.rename(columns = data.iloc[0])
+# Remove line 0
 data = data.drop(data.index[0])
+# Check dataframe
 print(data.head())
+# Check last line of data
 print(data.tail())
+
 # ### Part 2 
 # 
 # In this section, you will calculate simple statistics based on the input data:
